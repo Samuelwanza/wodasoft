@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.4",
+    "deepmerge": "^4.2.2",
     "next": "13.1.5",
     "nookies": "^2.5.2",
     "react": "18.2.0",

@@ -21,7 +21,8 @@ const UserProvider = ({ children, ...props }) => {
   const [registerMutation, {}] = useMutation(CREATE_USER_MUTATION);
   const [profileQuery, {}] = useLazyQuery(GET_USER_PROFILE);
 
-  const isAuthenticated = !user;
+  //   const isAuthenticated = !user;
+  var isAuthenticated = !user;
 
   useEffect(() => {
     setUser(JSON.parse(localStorage.getItem("user")));
