@@ -15,26 +15,6 @@ const SIGNUP_MUTATION = gql`
   }
 `;
 
-const CREATE_USER_MUTATION = gql`
-  mutation user_details($data: ProfessionalDetailInput!) {
-    createProfessionalDetail(data: $data) {
-      data {
-        attributes {
-          certification_link
-          Years_of_experience
-          Field_of_specialisation
-          image_url
-          user
-          role
-          name
-          email
-          bio
-          skills
-        }
-      }
-    }
-  }
-`;
 const LOGIN_MUTATION = gql`
   mutation login($email: String!, $password: String!) {
     login(input: { identifier: $email, password: $password }) {
@@ -87,10 +67,4 @@ export const DELETE_USER = gql`
   }
 `;
 
-export {
-  SIGNUP_MUTATION,
-  LOGIN_MUTATION,
-  CREATE_USER_MUTATION,
-  FORGOT_PASSWORD,
-  RESET_PASSWORD,
-};
+export { SIGNUP_MUTATION, LOGIN_MUTATION, FORGOT_PASSWORD, RESET_PASSWORD };
